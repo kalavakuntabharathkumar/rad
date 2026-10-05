@@ -1,0 +1,12 @@
+:root { color-scheme: light; }
+body { background: #f5f7fb; color: #172033; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+.eyebrow { color: #5267b8; font-size: .75rem; font-weight: 800; letter-spacing: .13em; }
+.metric-card { background: white; border: 1px solid #e4e8f1; border-radius: 1rem; padding: 1.25rem; box-shadow: 0 4px 16px rgba(30, 50, 90, .04); }
+.metric-value { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 750; letter-spacing: -.04em; }
+.card { border-radius: 1rem; }
+.band-dot { display: inline-block; width: .65rem; height: .65rem; border-radius: 50%; margin-right: .55rem; background: #5b9d7b; }
+.band-dot.medium { background: #d8a33c; }
+.band-dot.high { background: #cc6262; }
+.progress { min-width: 100px; height: .55rem; background: #e8ecf5; }
+.progress-bar { background: #5267b8; }
+:focus-visible { outline: 3px solid #233fb0; outline-offset: 3px; }
