@@ -1,0 +1,19 @@
+format_version: 10
+pipelines:
+  credit-risk-api:
+    group: analytics
+    materials:
+      source:
+        git: https://example.invalid/your-team/credit-risk-analytics.git
+        branch: main
+    stages:
+      - test:
+          jobs:
+            unit-tests:
+              tasks:
+                - exec: { command: python, arguments: ["-m", "pytest", "backend/tests"] }
+      - package:
+          jobs:
+            api-image:
+              tasks:
+                - exec: { command: docker, arguments: ["build", "-t", "credit-risk-api:local", "backend"] }
