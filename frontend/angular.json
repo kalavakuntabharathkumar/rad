@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "credit-risk-dashboard": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/credit-risk-dashboard",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css", "src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {"production": {"optimization": true, "outputHashing": "all"}}
+        },
+        "serve": {"builder": "@angular-devkit/build-angular:dev-server", "configurations": {"production": {"buildTarget": "credit-risk-dashboard:build:production"}, "development": {"buildTarget": "credit-risk-dashboard:build"}}}
+      }
+    }
+  }
+}

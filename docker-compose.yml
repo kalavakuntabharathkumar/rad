@@ -1,0 +1,10 @@
+services:
+  api:
+    build: ./backend
+    ports: ["8000:8000"]
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Local_dev_password_123!"
+    ports: ["1433:1433"]
